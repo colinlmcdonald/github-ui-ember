@@ -1,7 +1,9 @@
 <h1>Orgs</h1>
+
 <ul>
-  {{#each org as |org|}}
-  <li>{{org}}</li>
-  {{/each}}
+  <li>{{link-to 'JQuery' 'org.repos' 'jquery'}}</li>
+  <li>{{link-to 'React' 'org.repos' 'react'}}</li>
+  <li>{{link-to 'Angular' 'org.repos' 'angular'}}</li>
 </ul>
+
 {{outlet}}
