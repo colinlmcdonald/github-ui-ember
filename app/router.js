@@ -7,6 +7,16 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('home');
+  this.route('orgs', function() {
+    model() {
+      return ['facebook', 'google', 'stripe', 'punks']
+    }
+  });
+
+  this.route('org', function() {
+    this.route('emberjs');
+  });
 });
 
 export default Router;
