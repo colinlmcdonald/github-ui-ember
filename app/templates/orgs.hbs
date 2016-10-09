@@ -1,9 +1,11 @@
 <h1>Orgs</h1>
 
 <ul>
-  <li>{{link-to 'JQuery' 'org.repos' 'jquery'}}</li>
-  <li>{{link-to 'React' 'org.repos' 'react'}}</li>
-  <li>{{link-to 'Angular' 'org.repos' 'angular'}}</li>
+  {{#each content as |org|}}
+    <span {{action 'addToFavorites' org.id}}>[[Favorite]]
+      <li>{{link-to org.id 'org' org.id}}</li>
+    </span>
+  {{/each}}
 </ul>
 
 {{outlet}}
