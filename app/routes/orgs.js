@@ -1,6 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  model() {
+    return [
+      {id: 'facebook'},
+      {id: 'colinlmcdonald'},
+      {id: 'reactGo'},
+      {id: 'freecodecamp'},
+      {id: 'yahoo'},
+      {id: 'google'}
+    ]
+  },
 
   favorites: Ember.inject.service(),
 
@@ -14,15 +24,5 @@ export default Ember.Route.extend({
       this.get('favorites.items').addObject(value)
       console.log(this.get('favorites.items').join(', '));
     }
-  },
-
-  model() {
-    return [
-      {id: 'emberjs'},
-      {id: 'facebook'},
-      {id: 'google'},
-      {id: 'reactGo'},
-      {id: 'colinlmcdonald'}
-    ];
   }
 });

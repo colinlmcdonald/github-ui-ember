@@ -1,2 +1,8 @@
 {{outlet}}
 <p>Issues</p>
+
+<ul>
+  {{#each model as |issue|}}
+    <li>{{issue.title}}</li>
+  {{/each}}
+</ul>
