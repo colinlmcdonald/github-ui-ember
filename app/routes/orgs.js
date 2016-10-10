@@ -8,7 +8,8 @@ export default Ember.Route.extend({
       {id: 'reactGo'},
       {id: 'freecodecamp'},
       {id: 'yahoo'},
-      {id: 'google'}
+      {id: 'google'},
+      {id: 'stupidstupidfucktard'}
     ]
   },
 
@@ -21,7 +22,7 @@ export default Ember.Route.extend({
 
   actions: {
     addToFavorites(value) {
-      this.get('favorites.items').addObject(value)
+      this.get('favorites.items').addObject(value.id)
       console.log(this.get('favorites.items').join(', '));
     }
   }

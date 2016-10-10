@@ -16,6 +16,7 @@ Router.map(function() {
       this.route('contributors');
     });
     this.route('repos');
+    this.route('notfound');
   });
   this.route('notfound', {path: '*path'});
 });
